@@ -1,0 +1,92 @@
+<!--
+
+Menu Component
+
+menuName (String)
+| The name of the menu
+
+menuItems (Array)
+| An array containing the contents of the menu
+- route (String/Function) [optional]
+- label (String/Function) [optional]
+- description (String) [optional]
+- itemClass (String) [optional]
+  | an optional CSS class
+- adminOnly (Boolean) [optional]
+  | whether to only show the item to admins
+- template (String) [optional]
+  | if a template is provided, it will override the route/label/description
+- data (Object) [optional]
+  | data contexnt for the template
+
+menuLabel (String) [optional]
+| The menu label
+
+menuLabelTemplate (String) [optional]
+| The name of a template to use as menu label
+
+menuLabelData (Object) [optional]
+| The data context for the label template
+
+menuClass (String) [optional]
+| An optional default CSS class given to the menu
+
+- menuCollapsed (Boolean) [optional]
+| whether the menu should start out collapsed (only useful for accordion menus)
+
+menuMode (String) [optional]
+| "accordion", "dropdown", or "list" (defaults to "list")
+
+-->
+
+<template name="menuComponent">
+  <div class="menu {{menuClass}}">
+    {{#if showMenuLabel}}
+      <div class="menu-top-level" href="/">
+        {{#if labelIsTemplate}}
+          {{> Template.dynamic template=menuLabelTemplate data=menuLabelData}}
+        {{else}}
+          {{menuLabel}}
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="menu-menu">
+      {{#with rootMenuItems}}
+        <ul class="menu-contents" role="menu" aria-labelledby="dLabel">
+          {{#each this}}
+            {{> menuItem}}
+          {{/each}}
+        </ul>
+      {{/with}}
+      <a class="show-more" href="#">
+        {{{icon "expand"}}}
+        {{{icon "collapse"}}}
+      </a>
+    </div>
+  </div>
+</template>
+
+<template name="menuItem">
+  <li class="menu-item {{itemClass}}">
+  
+    <div class="menu-item-wrapper">
+      {{#if hasTemplate}}
+        {{> Template.dynamic template=template data=data}}
+      {{else}}
+        <a class="menu-sub-level" href="{{itemRoute}}">
+          <span class="menu-label">{{itemLabel}}</span>
+          {{#if description}}<span class="menu-description">{{_ description}}</span>{{/if}}
+        </a>
+      {{/if}}
+    </div>
+
+    {{#with childMenuItems}}
+      <ul class="menu-child-items">
+        {{#each this}}
+          {{> menuItem}}
+        {{/each}}
+      </ul>
+    {{/with}}
+
+  </li>
+</template>

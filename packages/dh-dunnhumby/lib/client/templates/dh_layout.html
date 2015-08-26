@@ -1,0 +1,22 @@
+<template name="dh_layout">
+  {{> css}}
+  <div class="outer-wrapper {{currentPage}} {{navLayout}}">
+    {{> mobile_nav}}
+    <div class="inner-wrapper template-{{pageName}}">
+      {{> header}}      
+      <div class="content-wrapper">
+        {{> iris_main_header}}
+        <!--{{> iris_sub_header}}-->
+        {{> messages}}
+        {{> modules zone="hero"}}
+        {{> yield "adminMenu"}}
+        {{> modules zone="top" zoneClass="top"}}
+        {{> yield}}
+        {{> modules zone="footer" zoneClass="footer"}}
+      </div>        
+      {{> iris_bottom_nav}}
+      <div class="overlay hidden"></div>
+    </div>
+    {{{extraCode}}}
+  </div>
+</template>

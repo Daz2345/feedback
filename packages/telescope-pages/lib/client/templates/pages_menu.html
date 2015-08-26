@@ -1,0 +1,9 @@
+<template name="pages_menu">
+  {{#if hasPages}}
+    <div class="pages-menu {{moduleClass}}">
+      {{#each pages}}
+        <a href="{{pathFor route='page'}}">{{title}}</a>
+      {{/each}}
+    </div>
+  {{/if}}
+</template>

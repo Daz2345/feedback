@@ -1,0 +1,49 @@
+@media (max-width: 599px) {
+
+  .side-nav .header {
+    width: 100%;
+    background-color: #353433;
+    color:#fff;
+    position: fixed;
+    height: 50px;
+    border-bottom: 1px solid #bbb;
+  }
+  
+  h1.logo.header-module.mobile-only .mobile-title {
+    color:#fff;
+  }
+}
+
+.post-heading .post-title:visited {
+    color: #444;
+}
+
+.meteor-status-shown {
+    z-index: 10000;
+}
+
+a:visited {
+    color: #444;
+    font-weight: bold;
+}
+
+a.retry{
+  color:#4393D7;
+}
+
+.checkbox-inline {
+    display: inline-block !important;
+    width: 200px;
+}
+
+.with-tagline a small {
+    text-transform: lowercase;
+}
+
+table, th, td {
+   border: 1px solid lightgrey;
+}
+
+.categories-list .form-module {
+    max-width: 100%;
+}

@@ -1,0 +1,35 @@
+<template name="dh_post_page">
+  {{#with post}}
+  {{#if isPending}}
+    <div class="grid">
+      <div class="error pending-message module">
+        {{_ "thanks_your_post_is_awaiting_approval"}}
+      </div>
+    </div>
+  {{/if}}
+  <div class="single-post grid animated fadeIn">
+    <div class="posts posts-list">
+      {{> post_item}}
+    </div>
+    {{#if CSS}}
+      {{> post_css}}
+    {{/if}}    
+    {{#if body}}
+      {{> post_body}}
+    {{/if}}
+    {{#if pictures}}
+      {{ > pictures}}
+    {{/if}}
+    {{#if chart}}
+      {{ > chart}}
+    {{/if}}    
+    {{#if heatMap}}
+      {{ > heatMap}}
+    {{/if}}       
+    {{#if isdunnhumby}}
+      {{> comment_submit}}
+      {{> comment_list}}
+    {{/if}}
+  </div>
+    {{/with}}
+</template>

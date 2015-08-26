@@ -22,31 +22,32 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/custom_fields.js',
-    'lib/template_modules.js',
-    'lib/callbacks.js'
+    // 'lib/template_modules.js',
+    // 'lib/callbacks.js'
   ], ['client', 'server']);
 
   // client
 
   api.addFiles([
-    'lib/client/templates/hello.html',
-    'lib/client/templates/hello.js',
-    'lib/client/templates/custom_post_title.html',
-    'lib/client/templates/custom_post_title.js',
+    'lib/client/templates/tesco_tabs.html',
+    'lib/client/templates/main.html',
+    'lib/client/templates/main.js',
+  //   'lib/client/templates/custom_post_title.html',
+  //   'lib/client/templates/custom_post_title.js',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js'
   ], ['client']);
 
   // server
 
-  api.addFiles([
-    'lib/server/templates/custom_emailPostItem.handlebars'
-  ], ['server']);
+  // api.addFiles([
+  //   'lib/server/templates/custom_emailPostItem.handlebars'
+  // ], ['server']);
 
   // i18n languages (must come last)
 
-  api.addFiles([
-    'i18n/en.i18n.json'
-  ], ['client', 'server']);
+  // api.addFiles([
+  //   'i18n/en.i18n.json'
+  // ], ['client', 'server']);
 
 });

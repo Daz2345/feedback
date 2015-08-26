@@ -50,7 +50,13 @@ Posts.getSubParams = function (terms) {
       parameters.find.categories = {$in: terms.category};
   }
   
-  // console.log(parameters);
-
+  if (!!terms.storeNumber) {
+      parameters.find.storeNumber = terms.storeNumber;
+  }
+  
+  if (!!terms.department) {
+      parameters.find.department = terms.department;
+  }
+  
   return parameters;
 };

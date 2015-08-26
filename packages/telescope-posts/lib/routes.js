@@ -17,11 +17,15 @@ Posts.controllers.list = RouteController.extend({
 
     var userLoggedIn = (Meteor.user() !== null) ? true : this.userLoggedIn;
     var userCats = (userLoggedIn) ? Meteor.user().categories : "";
+    var userStore = (userLoggedIn) ? Meteor.user().storeNumber : "";
+    var userDepartment = (userLoggedIn) ? Meteor.user().department : "";
 
     var terms = {
       view: this.view,
       limit: this.params.limit || Settings.get('postsPerPage', 10),
       category: userCats,
+      storeNumber: userStore,
+      department: userDepartment,
       enableCache: true
     };
 

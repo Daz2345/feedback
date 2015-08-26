@@ -1,0 +1,1 @@
+Template.tesco_tabs.replaces("iris_tabs");

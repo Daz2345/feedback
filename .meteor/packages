@@ -12,22 +12,22 @@ telescope:core
 # Note: all following packages depend on telescope:core; Additional internal dependencies are mentioned
 
 telescope:migrations
-telescope:api
+# telescope:api
 telescope:daily # singleday
 telescope:datetimepicker
 telescope:debug
 telescope:email
-telescope:embedly
+# telescope:embedly
 # telescope:getting-started
-telescope:invites
+# telescope:invites
 telescope:kadira
-telescope:newsletter
+# telescope:newsletter
 telescope:notifications
 telescope:pages
-telescope:post-by-feed
+# telescope:post-by-feed
 telescope:releases
-telescope:rss
-telescope:scoring
+# telescope:rss
+# telescope:scoring
 telescope:search
 # telescope:share
 telescope:singleday
@@ -42,10 +42,10 @@ telescope:update-prompt
 ############ dh Packages ############
 
 dh:theme
-dh:chart
+# dh:chart
 dh:api
 dh:personal
-dh:dunnhumby
 dh:notifications
 raix:push
-dh:heatmap
+# dh:heatmap
+dh:tesco

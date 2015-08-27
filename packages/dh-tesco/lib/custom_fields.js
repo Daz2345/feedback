@@ -104,6 +104,6 @@ Users.addField({
 
 Posts.removeField('url');
 Posts.removeField('categories');
-// Users.removeField('telescope.bio');
-// Users.removeField('telescope.website');
-// Users.removeField('telescope.twitterUsername');
+Users.removeField('telescope.bio');
+Users.removeField('telescope.website');
+Users.removeField('telescope.twitterUsername');

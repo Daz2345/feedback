@@ -1,3 +1,3 @@
-Users.updatedunnhumby = function (userId, dunnhumby) {
-  Users.update(userId, {$set: {isdunnhumby: dunnhumby}});
+Users.updateManager = function (userId, dunnhumby) {
+  Users.update(userId, {$set: {isManager: Manager}});
 };

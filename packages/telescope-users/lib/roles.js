@@ -4,18 +4,18 @@
  */
 Users.is = {};
 /**
- * Check if a user is a dunnhumby
+ * Check if a user is a manager
  * @param {Object|string} userOrUserId - The user or their userId
  */
-Users.is.dunnhumby = function (userOrUserId) {
+Users.is.manager = function (userOrUserId) {
   try {
     var user = Users.getUser(userOrUserId);
-    return !!user && !!user.isdunnhumby;
+    return !!user && !!user.isManager;
   } catch (e) {
     return false; // user not logged in
   }
 };
-Users.is.dunnhumbyById = Users.is.dunnhumby;
+Users.is.managerbyId = Users.is.manager;
 
 /**
  * Check if a user is an admin

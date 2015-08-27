@@ -1,6 +1,6 @@
 Template.users_list_actions.helpers({
-  userIsdunnhumby: function() {
-    return Users.is.dunnhumby(this);
+  userIsManager: function() {
+    return Users.is.manager(this);
   },
   isInvited: function() {
     return this.telescope.isInvited;
@@ -29,11 +29,11 @@ Template.users_list_actions.events({
   },
   'click .dunnhumby-link': function(e){
     e.preventDefault();
-    Users.updatedunnhumby(this._id, true);
+    Users.updateManager(this._id, true);
   },
   'click .undunnhumby-link': function(e){
     e.preventDefault();
-    Users.updatedunnhumby(this._id, false);
+    Users.updateManager(this._id, false);
   },  
   'click .delete-link': function(e){
     e.preventDefault();

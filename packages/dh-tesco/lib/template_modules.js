@@ -1,5 +1,6 @@
 // add template module to the hero zone
-Telescope.modules.add("hero", {
-  template: 'hello',
-  order: 1
+// push "categories" modules to postHeading
+Telescope.modules.add("postHeading", {
+  template: 'post_assigned',
+  order: 30
 });

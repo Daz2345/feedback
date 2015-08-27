@@ -8,7 +8,7 @@ Template.dh_users_dashboard.helpers({
         { key: 'avatar', label: '', tmpl: Template.users_list_avatar, sortable: false },
         { key: 'createdAt', label: 'Member Since', tmpl: Template.users_list_created_at, sort: 'descending' },
         { key: 'isAdmin', label: 'Admin', fn: function(val){return val ? 'Yes':'No'} },
-        { key: 'isdunnhumby', label: 'dunnhumby', fn: function(val){return val ? 'Yes':'No'} },
+        { key: 'isManager', label: 'Manager', fn: function(val){return val ? 'Yes':'No'} },
         { key: 'username', label: 'Username', tmpl: Template.users_list_username },
         { key: 'telescope.displayName', label: 'Display Name', tmpl: Template.users_list_display_name },
         { key: 'telescope.email', label: 'Email', tmpl: Template.users_list_email },

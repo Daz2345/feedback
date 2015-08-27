@@ -8,7 +8,18 @@ Package.onUse(function (api) {
 
   // ---------------------------------- 1. Core dependency -----------------------------------
 
-  api.use("telescope:core");
+  var packages = [
+    'telescope:core',    
+    'telescope:users',
+    'fastclick',
+    'force-ssl',
+    '255kb:meteor-status',
+    'meteorhacks:zones',
+    'mixmax:smart-disconnect'
+  ];
+
+  api.use(packages);
+  api.imply(packages);
 
   // ---------------------------------- 2. Files to include ----------------------------------
 
@@ -22,18 +33,19 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/custom_fields.js',
-    // 'lib/template_modules.js',
+    'lib/template_modules.js'
     // 'lib/callbacks.js'
   ], ['client', 'server']);
 
   // client
 
   api.addFiles([
+    'lib/client/templates/Assigned.html',
     'lib/client/templates/tesco_tabs.html',
     'lib/client/templates/main.html',
     'lib/client/templates/main.js',
-  //   'lib/client/templates/custom_post_title.html',
-  //   'lib/client/templates/custom_post_title.js',
+    'lib/client/templates/custom_post_title.html',
+    'lib/client/templates/custom_post_title.js',
     'lib/client/stylesheets/custom.scss',
     'lib/client/custom_templates.js'
   ], ['client']);

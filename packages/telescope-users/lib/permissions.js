@@ -87,9 +87,10 @@ Users.can.edit = function (user, document) {
   }
 
   var adminCheck = Users.is.admin(user);
+  var managerCheck = Users.is.manager(user);  
   var ownerCheck = Users.is.owner(user, document);
 
-  return adminCheck || ownerCheck;
+  return adminCheck || managerCheck || ownerCheck;
 };
 
 Users.can.editById = function (userId, document) {

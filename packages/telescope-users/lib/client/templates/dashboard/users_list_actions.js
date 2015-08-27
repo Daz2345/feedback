@@ -11,7 +11,6 @@ Template.users_list_actions.events({
   'click .invite-link': function(e){
     e.preventDefault();
     Meteor.users.update(this._id, {$set: {"telescope.isInvited": true}});
-
   },
   'click .uninvite-link': function(e){
     e.preventDefault();

@@ -55,8 +55,8 @@ Users.addField({
     type: Number,
     optional: true,
     autoform: {
-         group: 'tesco',
-         label: 'Store Number'
+        group: 'tesco',
+        label: 'Store Number'
     },    
     editableBy: ["admin"],
   }
@@ -65,18 +65,19 @@ Users.addField({
 Users.addField({
   fieldName: 'department',
   fieldSchema: {
-    type: Number,
+    type: String,
     optional: true,
     autoform: {
-         group: 'tesco',
-         label: 'Department'
+        group: 'tesco',
+        label: 'Department'
     },
     allowedValues: [
+            "Store Manager",      
             "Bakery",
             "Fresh",
             "Customer Service",
             "Staff Ops"],     
-    editableBy: ["admin", "manger"],
+    editableBy: ["admin", "manager"],
   }
 });
 
@@ -103,6 +104,6 @@ Users.addField({
 
 Posts.removeField('url');
 Posts.removeField('categories');
-Users.removeField('telescope.bio');
-Users.removeField('telescope.website');
-Users.removeField('telescope.twitterUsername');
+// Users.removeField('telescope.bio');
+// Users.removeField('telescope.website');
+// Users.removeField('telescope.twitterUsername');

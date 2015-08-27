@@ -50,6 +50,6 @@ Meteor.startup(function() {
 
 });
 
-// Meteor.setInterval(function() {
-//     Session.set("datetime", new Date());
-// }, 30000);
+Meteor.setInterval(function() {
+    Session.set("datetime", new Date());
+}, 30000);

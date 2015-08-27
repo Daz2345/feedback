@@ -26,6 +26,7 @@ Posts.controllers.list = RouteController.extend({
       category: userCats,
       storeNumber: userStore,
       department: userDepartment,
+      thistime: new Date(),
       enableCache: true
     };
 

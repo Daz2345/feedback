@@ -37,12 +37,12 @@ Posts.getSubParams = function (terms) {
     parameters.options.limit = maxLimit;
   }
 
-  var d = new Date();
-  d.setMonth(d.getMonth() + 1);
+  // var d = Session.get("datetime");
+  // d.setDate(d.getDate() + 1);
 
   // hide future scheduled posts unless "showFuture" is set to true or postedAt is already defined
   if (!parameters.showFuture && !parameters.find.postedAt)
-    parameters.find.postedAt = {$lte: d};
+    parameters.find.postedAt = {$lte: terms.thistime};
 
   // filter by category if category _id is provided (unless categories parameter already specificed)
   // NOTE: this is a temporary fix because views cannot currently be combined

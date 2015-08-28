@@ -1,9 +1,9 @@
 <template name="custom_post_title">
   <h3 class="post-title">
       {{#if department}}
-    <a href="{{this.getLink}}" class="post-title" target="{{this.getLinkTarget}}">{{title}} - Assigned to {{department}}</a>
+    <a href="{{this.getLink}}" class="post-title" target="{{this.getLinkTarget}}">Assigned to {{department}} - {{body}}</a>
     {{else}}
-    <a href="{{this.getLink}}" class="post-title" target="{{this.getLinkTarget}}">{{title}}</a>
+    <a href="{{this.getLink}}" class="post-title" target="{{this.getLinkTarget}}">{{body}}</a>
     {{/if}}
   </h3>
 </template>

@@ -44,4 +44,4 @@ telescope:update-prompt
 dh:theme
 dh:api
 dh:tesco
-dh:dunnhumby
+# dh:dunnhumby
